@@ -1,0 +1,470 @@
+@font-face {
+    font-family:livvic ;
+    src: url(../fonts/Livvic-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: livvic;
+}
+
+// root 
+$header_color: #014E56;
+$build_color:#012F34;
+$success_color:#004047;
+$ready_color:#F67E7E;
+$footer_color:#002529;
+$main_color:#ffffff;
+$success_name_color:#79C8C7;
+
+html {
+  font-size: 62.5%;
+  font-family: livvic;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 32.7rem;
+  margin: 0 auto;
+}
+
+.p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: $main_color;
+    padding: 0 1rem;
+
+}
+
+nav{
+    background-color: $header_color;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4.8rem;
+        div{
+            cursor: pointer;
+        }
+    }
+    .menu{
+      display: none;
+    }
+}
+
+header{
+    background-color: $header_color;
+    padding-top: 8rem;
+    text-align: center;
+    h1{
+        padding:0 5rem 0.8rem 5rem;
+        color: $main_color;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 4rem;
+        
+        span{
+            color: $ready_color;
+        }
+    }
+    p{
+        font-family: Livvic;
+        font-weight: 600;
+        line-height: 2.8rem;
+
+    }
+    .container{
+        padding-bottom: 10rem;
+    }
+}
+
+.build_meneger{
+    background:$build_color;
+    padding-bottom: 6.4rem;
+    position: relative;
+    .build_sc_top{
+      display: flex;
+      .liner{
+        position: absolute;
+        border: 0.2rem solid $ready_color;
+        width: 5rem;
+        top: 7rem;
+      }
+      h2{
+        width: 20rem;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+        text-align: left;
+        color: $main_color;
+        padding-top: 10rem;
+
+      }
+      
+
+    }
+
+    .build_cards{
+      padding-top: 5.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4.8rem;
+
+      .build_card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h4{
+font-size: 1.8rem;
+font-weight: 700;
+line-height: 2.8rem;
+color: $ready_color;
+padding: 1.6rem 0 0.8rem;
+        }
+        p{
+          padding: 0;
+        }
+      }
+    }
+    .build_bg_img{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+}
+
+.success{
+  background-color: $success_color;
+  position: relative;
+  .success_bg_img_top{
+    position: absolute;
+    left: 0;
+  }
+
+  .success_top{
+    padding-top: 14rem;
+    h2{
+      font-size: 2.9rem;
+      font-weight: 700;
+      line-height: 3.2rem;
+      text-align: center;
+      color: $main_color;
+      span{
+        color: $success_name_color;
+      }
+    }
+  }
+
+  .success_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    padding: 4.8rem 0 16.4rem;
+    .success_card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      .success_card_bg_img{
+        position: absolute;
+        top: 0.5rem;
+        z-index: 0;
+      }
+      p{
+        padding-top: 3.6rem;
+        z-index: 1;
+      }
+
+      .success_user_name{
+      font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+        color: $success_name_color;
+        padding: 1.6rem 0 0.2rem;
+      }
+      .success_user_jobs{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        color: $main_color;
+        padding-bottom: 1.6rem;
+      }
+
+
+
+      
+    }
+    
+
+  }
+
+  .success_bg_img_bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+
+}
+
+.ready{
+  background:$ready_color;
+  padding: 8.3rem 0;
+  position: relative;
+  .ready_top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+    h2{
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 3.2rem;
+      text-align: center;
+      padding-bottom: 2.4rem;
+      color: $build_color;
+    }
+    button{
+      border: 0.2rem solid $build_color;
+      border-radius: 5rem;
+      padding: 1rem 3.2rem;
+      background: none;
+      width: 15.5rem;
+      cursor: pointer;
+
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      font-weight: 600;
+      color: $build_color;
+    }
+  }
+  .ready_bg_bottom{
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+  }
+}
+
+footer{
+  background-color: $footer_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6.4rem 0;
+
+  .footer_spans {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+    gap: 2.4rem;
+    padding: 2.4rem 0;
+  
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    a{
+      color: $main_color;
+
+    }
+
+  }
+
+  ul{
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  padding-bottom: 4rem;
+  a{
+  color: $main_color;
+  opacity: 60%;
+
+  }
+  }
+
+  .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+  span{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    opacity: 60%;
+    color: $main_color;
+
+  }
+}
+
+
+@media screen and (min-width:1440px){
+  .container{
+    max-width: 111rem;
+  }
+
+  nav{
+    padding-bottom: 1rem;
+    .burger{
+      display: none;
+    }
+    .container{
+      justify-content: start;
+    }
+    .logo_div{
+      margin-right: 8rem;
+    }
+    .menu{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul{
+        display: flex;
+        gap: 4rem;
+      }
+      a{
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: $main_color;
+      }
+      button{
+      border: 0.2rem solid $main_color;
+      border-radius: 5rem;
+      padding: 1rem 3.2rem;
+      background: none;
+      width: 15.5rem;
+      cursor: pointer;
+
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      font-weight: 600;
+      color: $main_color;
+      }
+    }
+  }
+
+  header{
+    position: relative;
+    .container{
+      display: flex;
+      align-items: end;
+      padding-bottom: 24rem;
+      h1{
+        padding: 0 0 0.8rem 0;
+      font-size: 10rem;
+      font-weight: 700;
+      line-height: 10rem;
+      text-align: left;
+      }
+      p{
+        width: 42rem;
+        text-align: start;
+        padding-bottom: 2rem;
+      }
+    }
+    .header_bg{
+      position: absolute;
+      bottom: 0;
+      right: 16.5rem;
+    }
+  }
+
+  .build_meneger{
+    .container{
+      display: flex;
+      .build_sc_top{
+        width: 50%;
+        h2{
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 4.8rem;
+          width: 90%;
+        }
+      }
+
+      .build_card{
+        flex-direction: row;
+        gap: 2.2rem;
+        text-align: start;
+      }
+
+    }
+    .build_bg_img{
+      top: 27.2rem;
+    }
+  }
+
+  .success{
+    .success_top{
+      h2{
+        padding: 0 12rem;
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 4.8rem;
+      }
+    }
+
+    .success_cards{
+      width: 100%;
+      gap: 3rem;
+      flex-direction: row;
+
+      p{
+        width: 35rem;
+      }
+    }
+  }
+
+  .ready{
+    .ready_top{
+      flex-direction: row;
+      justify-content: space-around;
+      h2{
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+    }
+
+  }
+
+  footer{
+    .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+    }
+  }
+
+}
